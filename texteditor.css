@@ -1,0 +1,140 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/imagens/295875.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Remove a barra de rolagem da página */
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: -1;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.tool-list {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    padding: 10px;
+    gap: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+}
+
+.tool--btn {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #f5f5f5;
+    background-color: #444;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.tool--btn:hover {
+    background-color: #555;
+}
+
+.tool--btn:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
+
+#output {
+    height: 300px;
+    padding: 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #f5f5f5;
+    overflow-y: auto; /* Barra de rolagem apenas na caixa de texto */
+    margin-bottom: 50px; /* Adicionado para evitar invasão de espaço */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    color: #f5f5f5;
+    position: relative;
+}
+
+.save-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.save-options {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.save-container:hover .save-options {
+    display: flex;
+}
+
+#saveButton, .save-options button {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #444; /* Estilização do botão salvar */
+    color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#saveButton:hover, .save-options button:hover {
+    background-color: #555;
+}
+
+.credits {
+    color: #f5f5f5;
+    text-decoration: none;
+}

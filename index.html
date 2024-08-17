@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta author="repl1cant3" content="credits to: Learning Axis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich-text Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="texteditor.css">
+</head>
+<body>
+    <!-- Sobreposição para o efeito de desfoque -->
+    <div class="overlay"></div>
+    <div class="container">
+        <!-- Barra de Ferramentas -->
+        <ul id="toolbar" class="tool-list"></ul>
+        <!-- Caixa de Texto Editável -->
+        <div id="output" contenteditable="true"></div>
+        <!-- Rodapé com Contadores, Botão de Salvar e Créditos -->
+        <div class="footer">
+            <div class="counters">
+                <span id="charCount">0 caracteres</span>
+                <span id="wordCount">0 palavras</span>
+            </div>
+            <div class="save-container">
+                <button id="saveButton" onclick="toggleSaveOptions()">
+                    <i class="fas fa-save"></i> Salvar Arquivo como
+                </button>
+            </div>
+            <a href="https://github.com/repl1cante" target="_blank" class="credits">Visitar GitHub</a>
+        </div>
+    </div>
+    <script src="texteditor.js"></script>
+</body>
+</html>
